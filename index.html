@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Good Morning Kiki ☀️</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to top, #ffecd2, #fcb69f);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .card {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        text-align: center;
+        max-width: 400px;
+        animation: fadeIn 2s ease;
+    }
+
+    h1 {
+        color: #ff7a7a;
+    }
+
+    p {
+        font-size: 16px;
+        color: #444;
+        margin: 15px 0;
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        background: #ff7a7a;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #ff5252;
+    }
+
+    .hidden {
+        display: none;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #ff7a7a;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    .sun {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        width: 80px;
+        height: 80px;
+        background: #FFD93D;
+        border-radius: 50%;
+        box-shadow: 0 0 40px #FFD93D;
+        animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+        from {box-shadow: 0 0 20px #FFD93D;}
+        to {box-shadow: 0 0 60px #FFD93D;}
+    }
+</style>
+</head>
+
+<body>
+
+<div class="sun"></div>
+
+<div class="card">
+    <h1>Good Morning Kiki ☀️</h1>
+    
+    <p>
+        Rise and shine, beautiful.  
+        I hope your morning feels soft, warm, and full of good energy.
+    </p>
+
+    <p>
+        Just a little reminder…  
+        You’re appreciated, you’re special, and you make the world a little brighter just by being in it.
+    </p>
+
+    <button onclick="showMessage()">Tap for a surprise 💌</button>
+
+    <p class="hidden" id="message">
+        If today gets tough, just remember…  
+        someone out here is rooting for you, smiling because of you,  
+        and hoping your day turns out amazing 💖
+    </p>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("message").style.display = "block";
+}
+</script>
+
+</body>
+</html>
